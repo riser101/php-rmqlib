@@ -1,11 +1,11 @@
 <?php namespace RabbitMQLib;
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../utils/BMSCommonLib/index.php';
+require __DIR__ . '/../utils/CommonLib/index.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
-use BMSCommonLib\Log;
+use CommonLib\Log;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Exception\AMQPRuntimeException;
 
