@@ -1,6 +1,6 @@
 # RabbitMQ PHP Library
 -
-This library is for consuming RabbitMQ queues using PHP.
+This library is for consuming RabbitMQ queues using PHP. It is build on top of [php-amqplib](https://github.com/videlalvaro/php-amqplib) which extends the AMQP protocol for RabbitMQ.
 
 
 ## Installation
