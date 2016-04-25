@@ -1,0 +1,9 @@
+{
+    "host": "your-host-goes-here",
+    "port": 5672,
+    "username": "guest",
+    "password": "guest",
+    "vhost":"test",
+    "heartbeat":12,
+    "generateLogs":true
+}
