@@ -9,14 +9,14 @@ The recommended way to install php-rmqlib is through [Composer.](https://getcomp
 2. Now edit QueueConfig.json in library root so that php-rmqlib can talk to your rabbitmq deploy.
 
 
-    {
-        "host": "ip_of_your_deployed_instance_of_rabbitmq",
-        "port": 5672,
-        "username": "your_rabbitmq_account_username",
-        "password": "your_rabbitmq_account_password",
-        "vhost": "cs",
-        "heartbeat": 10
-    }
+        {
+            "host": "ip_of_your_deployed_instance_of_rabbitmq",
+            "port": 5672,
+            "username": "your_rabbitmq_account_username",
+            "password": "your_rabbitmq_account_password",
+            "vhost": "cs",
+            "heartbeat": 10
+        }
 2. Next, at the top of your PHP script require the rmq.php file :
     `require 'path/to/rabbitmqlib/src/rmq.php';`
 
@@ -29,16 +29,16 @@ To use this library, initialize the RabbitMQ class object.
 This example pushes your messages into the configured queue:
 
     //takes path to QueueConfig.json and log file. Creates a new library object.
-  $rmq_object = new RabbitMQLib\RabbitMQ(__DIR__ . 'QueueConfig.json', __DIR__ . 'log.txt');
-  //pushes your job to the queue
-  $rmq_object->send($queue_name, 'your_message_goes_here', $params);
+    $rmq_object = new RabbitMQLib\RabbitMQ(__DIR__ . 'QueueConfig.json', __DIR__ . 'log.txt');
+    //pushes your job to the queue
+    $rmq_object->send($queue_name, 'your_message_goes_here', $params);
 
 #### Example 2
 This example pulls your messages into the configured queue:
 
-  $rmq_object = new RabbitMQLib\RabbitMQ(__DIR__ . 'QueueConfig.json', __DIR__ . 'log.txt');
-  //pulls a job from the queue
-  $res = $rmq_object->get($queue);
+    $rmq_object = new RabbitMQLib\RabbitMQ(__DIR__ . 'QueueConfig.json', __DIR__ . 'log.txt');
+    //pulls a job from the queue
+    $res = $rmq_object->get($queue);
 
 
 ## Methods
